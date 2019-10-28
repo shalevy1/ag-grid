@@ -115,10 +115,10 @@
             > div {
                 &:not(.ag-input-wrapper) {
                     @if ($rtl) {
-                        padding-right: $grid-size / 2;
+                        padding-right: $ag-grid-size / 2;
                     }
                     @else {
-                        padding-left: $grid-size / 2;
+                        padding-left: $ag-grid-size / 2;
                     }
                 }
             }
@@ -126,15 +126,15 @@
         .ag-group-component-container {
             .ag-group-item {
                 @if ($rtl) {
-                    margin-top: $grid-size;
-                    margin-bottom: $grid-size;
+                    margin-top: $ag-grid-size;
+                    margin-bottom: $ag-grid-size;
                     margin-right: 0;
-                    margin-left: $grid-size / 2;
+                    margin-left: $ag-grid-size / 2;
                 }
                 @else {
-                    margin-top: $grid-size;
-                    margin-right: $grid-size / 2; 
-                    margin-bottom: $grid-size;
+                    margin-top: $ag-grid-size;
+                    margin-right: $ag-grid-size / 2; 
+                    margin-bottom: $ag-grid-size;
                     margin-left: 0;
                 }
                 
@@ -171,11 +171,11 @@
 @mixin icons_webfont() {
     .ag-icon {
         /* use !important to prevent issues with browser extensions that change fonts */
-        font-family: '#{$icon-font-family}';
+        font-family: '#{$ag-icon-font-family}';
         display: block;
         speak: none;
-        font-size: $icon-size;
-        color: $icon-color;
+        font-size: $ag-icon-size;
+        color: $ag-icon-color;
         font-style: normal;
         font-weight: normal;
         font-variant: normal;
@@ -186,7 +186,7 @@
         -moz-osx-font-smoothing: grayscale;
     }
 
-    @each $icon, $code in $icons_font_codes {
+    @each $icon, $code in $ag-icons-font-codes {
         .ag-icon-#{$icon} {
             &:before {
                 content: $code;
@@ -197,40 +197,40 @@
     .ag-icon-checkbox-checked,
     .ag-icon-checkbox-indeterminate,
     .ag-icon-checkbox-unchecked {
-        background-color: $alt-icon-color;
-        line-height: $icon-size;
+        background-color: $ag-alt-icon-color;
+        line-height: $ag-icon-size;
         border-radius: 3px;
         &-readonly {
             cursor: default;
-            opacity: $disabled-foreground-color-opacity;
+            opacity: $ag-disabled-foreground-color-opacity;
         }
     }
     .ag-icon-checkbox-checked {
-        color: $accent-color;
+        color: $ag-accent-color;
         &-readonly:before {
-            content: map-get($icons-font-codes, checkbox-checked);
+            content: map-get($ag-icons-font-codes, checkbox-checked);
         }
     }
     .ag-icon-checkbox-indeterminate-readonly:before {
-        content: map-get($icons-font-codes, checkbox-indeterminate);
+        content: map-get($ag-icons-font-codes, checkbox-indeterminate);
     }
     .ag-icon-checkbox-unchecked-readonly:before  {
-        content: map-get($icons-font-codes, checkbox-unchecked); 
+        content: map-get($ag-icons-font-codes, checkbox-unchecked); 
     }
 
     .ag-icon-row-drag:before {
-        content: map-get($icons-font-codes, grip);
+        content: map-get($ag-icons-font-codes, grip);
     }
 
     .ag-right-arrow:before {
-        content: map-get($icons-font-codes, left);
+        content: map-get($ag-icons-font-codes, left);
     }
 
     .ag-icon-radio-button-on {
-        color: $accent-color;
+        color: $ag-accent-color;
     }
 
     .ag-right-arrow:before {
-        content: map-get($icons-font-codes, right);
+        content: map-get($ag-icons-font-codes, right);
     }
 }

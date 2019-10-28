@@ -6,8 +6,8 @@
 
     input,
     select {
-        background-color: $card-background-color;
-        color: $foreground-color;
+        background-color: $ag-card-background-color;
+        color: $ag-foreground-color;
     }
 
     .ag-floating-filter-body input[readonly] {
